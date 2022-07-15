@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.app</groupId>
+    <artifactId>ApplicationServer</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+            <version>3.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-servlet</artifactId> <!-- changed -->
+            <version>3.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.inject</groupId>
+            <artifactId>jersey-hk2</artifactId>
+            <version>3.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>5.0.0</version>
+            <scope>provided</scope> <!-- changed -->
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>11.0.8</version>
+            </plugin>
+        </plugins>
+    </build>
+
+
+<!--    <properties>-->
+<!--        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
+<!--        <failOnMissingWebXml>false</failOnMissingWebXml>-->
+<!--        <maven.compiler.source>1.8</maven.compiler.source>-->
+<!--        <maven.compiler.target>1.8</maven.compiler.target>-->
+<!--        <junit.version>5.4.0</junit.version>-->
+<!--        <jsonassert.version>1.5.0</jsonassert.version>-->
+<!--        <jersey.version>3.0.2</jersey.version>-->
+<!--    </properties>-->
+<!--    -->
+<!--    <dependencyManagement>-->
+<!--        <dependencies>-->
+<!--            <dependency>-->
+<!--                <groupId>org.glassfish.jersey</groupId>-->
+<!--                <artifactId>jersey-bom</artifactId>-->
+<!--                <version>${jersey.version}</version>-->
+<!--                <type>pom</type>-->
+<!--                <scope>import</scope>-->
+<!--            </dependency>-->
+<!--        </dependencies>-->
+<!--    </dependencyManagement>-->
+
+<!--    <dependencies>-->
+
+<!--        &lt;!&ndash; Jetty &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.glassfish.jersey.containers</groupId>-->
+<!--            <artifactId>jersey-container-jetty-http</artifactId>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; Jersey DI and core&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.glassfish.jersey.inject</groupId>-->
+<!--            <artifactId>jersey-hk2</artifactId>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; Jetty 11 needs Servlet 5 &ndash;&gt;-->
+<!--        &lt;!&ndash; java.lang.NoClassDefFoundError: jakarta/servlet/ServletInputStream &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>jakarta.servlet</groupId>-->
+<!--            <artifactId>jakarta.servlet-api</artifactId>-->
+<!--            <version>5.0.0</version>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; add jackson to support json &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.glassfish.jersey.media</groupId>-->
+<!--            <artifactId>jersey-media-json-jackson</artifactId>-->
+<!--        </dependency>-->
+<!--        -->
+<!--        &lt;!&ndash; JUnit 5 &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.junit.jupiter</groupId>-->
+<!--            <artifactId>junit-jupiter-params</artifactId>-->
+<!--            <version>${junit.version}</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; test json data &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.skyscreamer</groupId>-->
+<!--            <artifactId>jsonassert</artifactId>-->
+<!--            <version>${jsonassert.version}</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+
+<!--    </dependencies>-->
+
+<!--        <build>-->
+<!--            <plugins>-->
+<!--                <plugin>-->
+<!--                    <groupId>org.apache.maven.plugins</groupId>-->
+<!--                    <artifactId>maven-war-plugin</artifactId>-->
+<!--                    <version>3.3.1</version>-->
+<!--                </plugin>-->
+<!--                <plugin>-->
+<!--                    <groupId>org.eclipse.jetty</groupId>-->
+<!--                    <artifactId>jetty-maven-plugin</artifactId>-->
+<!--                    <version>11.0.8</version>-->
+<!--                </plugin>-->
+<!--            </plugins>-->
+<!--        </build>-->
+
+</project>

@@ -1,0 +1,45 @@
+### USER
+### User info
+### User exists
+GET http://localhost:8080/api/user/info/fcd
+
+### User doens't exist
+GET http://localhost:8080/api/user/info/notauser
+
+### Server error - can't generate error
+GET http://localhost:8080/api/user/info/
+
+### User Register
+### Sucessfull registration
+POST http://localhost:8080/api/user/register
+Content-Type: application/x-www-form-urlencoded
+
+nick=fcd&pwd=fcd
+
+### User already exists
+POST http://localhost:8080/api/user/register
+Content-Type: application/x-www-form-urlencoded
+
+nick=fcd&pwd=fcd
+
+### Bad request
+POST http://localhost:8080/api/user/register
+Content-Type: application/x-www-form-urlencoded
+
+### Server Error
+POST http://localhost:8080/api/user/register
+
+### Login
+### Sucessfull Login
+POST http://localhost:8080/api/user/login
+Content-Type: application/x-www-form-urlencoded
+
+nick=fcd&pwd=fcd
+
+### Bad request
+POST http://localhost:8080/api/user/login
+Content-Type: application/x-www-form-urlencoded
+
+### Server Error
+POST http://localhost:8080/api/user/login
+
