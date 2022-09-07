@@ -1,0 +1,85 @@
+### User Register
+### Sucessfull registration
+POST http://localhost:8080/user/register
+Content-Type: application/x-www-form-urlencoded
+
+nick=fcd123&pwd=fcd123
+
+###
+### User already exists
+POST http://localhost:8080/user/register
+Content-Type: application/x-www-form-urlencoded
+
+nick=fcd123&pwd=fcd123
+
+###
+### Bad request
+POST http://localhost:8080/user/register
+Content-Type: application/x-www-form-urlencoded
+
+###
+### Server Error
+POST http://localhost:8080/user/register
+
+### Login
+### Sucessfull Login
+POST http://localhost:8080/user/login
+Content-Type: application/x-www-form-urlencoded
+
+nick=fcd123&pwd=fcd123
+
+###
+### Wrong User
+POST http://localhost:8080/user/login
+Content-Type: application/x-www-form-urlencoded
+
+nick=fcd1234&pwd=fcd123
+
+###
+### Wrong Password
+POST http://localhost:8080/user/login
+Content-Type: application/x-www-form-urlencoded
+
+nick=fcd123&pwd=fcd1231
+
+
+###
+### Bad request
+POST http://localhost:8080/user/login
+Content-Type: application/x-www-form-urlencoded
+
+###
+### Server Error
+POST http://localhost:8080/user/login
+
+### Delete
+### Sucessfull
+POST http://localhost:8080/user/delete
+Content-Type: application/x-www-form-urlencoded
+
+nick=up201810097&pwd=VeryStrongPassword123
+
+###
+### Wrong User
+POST http://localhost:8080/user/delete
+Content-Type: application/x-www-form-urlencoded
+
+nick=fcd1234&pwd=fcd123
+
+###
+### Wrong Password
+POST http://localhost:8080/user/delete
+Content-Type: application/x-www-form-urlencoded
+
+nick=fcd123&pwd=fcd1231
+
+###
+### Bad request
+POST http://localhost:8080/user/delete
+Content-Type: application/x-www-form-urlencoded
+
+###
+### Server Error
+POST http://localhost:8080/user/delete
+
+

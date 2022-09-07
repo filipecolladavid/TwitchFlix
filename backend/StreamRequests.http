@@ -1,0 +1,17 @@
+### Stream Requests
+### Add a stream to the database
+POST http://localhost:8080/stream/add
+Content-Type: application/x-www-form-urlencoded
+
+nick=fcd1233&title=ANewStreamasd
+
+###
+### Get all streams
+GET http://localhost:8080/stream/all
+
+###
+### Remove stream
+POST http://localhost:8080/stream/remove
+Content-Type: application/x-www-form-urlencoded
+
+nick=fcd123&title=ANewStream
