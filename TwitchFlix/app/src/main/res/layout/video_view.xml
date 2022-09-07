@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="280dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_DurationValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="1:25"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/txt_Duration"
+                app:layout_constraintTop_toBottomOf="@+id/txt_TitleValue" />
+
+            <ImageView
+                android:id="@+id/img_thumbnail"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:contentDescription="videoImageThumbnail"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <TextView
+                android:id="@+id/txt_TitleValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Titulo do Video a ver"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_thumbnail" />
+
+            <TextView
+                android:id="@+id/txt_YearValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="1984"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/txt_Year"
+                app:layout_constraintTop_toBottomOf="@+id/txt_TitleValue" />
+
+            <TextView
+                android:id="@+id/txt_Year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Year: "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_TitleValue" />
+
+            <TextView
+                android:id="@+id/txt_genre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="Genre: "
+                app:layout_constraintStart_toEndOf="@+id/txt_YearValue"
+                app:layout_constraintTop_toBottomOf="@+id/txt_TitleValue" />
+
+            <TextView
+                android:id="@+id/txt_GenreValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Action"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/txt_genre"
+                app:layout_constraintTop_toBottomOf="@+id/txt_TitleValue" />
+
+            <TextView
+                android:id="@+id/txt_Duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="Duration: "
+                app:layout_constraintStart_toEndOf="@+id/txt_GenreValue"
+                app:layout_constraintTop_toBottomOf="@+id/txt_TitleValue" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
